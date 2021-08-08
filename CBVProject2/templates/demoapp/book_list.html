@@ -1,0 +1,9 @@
+{%extends 'demoapp/base.html'%}
+
+{%block body_block%}
+<h1>Book Information from book_list</h1><hr>
+{%for book in book_list%}
+<h2><a href="/{{book.id}}">{{book.title}}</a></h2>
+{%endfor%}
+<a href="/create" class="btn btn-lg btn-primary">Create Book Data</a>
+{%endblock%}

@@ -1,0 +1,28 @@
+
+.container .jumbotron{
+  margin-top: 200px;
+  font-family: :'Dancing Script',cursive;
+}
+
+table,tr,td,thead,th{
+  border:2px solid red;
+  font-size: 30px;
+  color:blue;
+  background: #ee82ee;
+  margin:auto;
+}
+thead,th{
+  border: 2px solid red;
+  font-size: 30px;
+  color:blue;
+  margin:auto;
+  background: seashell;
+}
+h1{
+  margin: 0 auto;
+  text-align: center;
+}
+h2{
+  margin: 0 auto;
+  text-align: center;
+}

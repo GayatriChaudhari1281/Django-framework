@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style media="screen">
+      table,tr,td,thead,th{
+        border:2px solid red;
+        font-size: 30px;
+        color:yellow;
+        background: #ee82ee;
+        margin:auto;
+      }
+      h2{
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>IceCream Details</h2>
+    {%if icecream_list%}
+    <table border="1">
+      <thead>
+        <th>Flavour</th>
+        <th>Ingredient</th>
+        <th>Company</th>
+        <th>Price</th>
+        <th>Expriry date</th>
+      </thead>
+      {%for i in icecream_list%}
+      <tr>
+        <td>{{i.flavour}}</td>
+        <td>{{i.ingrediants}}</td>
+        <td>{{i.company}}</td>
+        <td>{{i.price}}</td>
+        <td>{{i.expdate}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+    {%else%}
+    <h3>No IceCream Records Found!!</h3>
+    {%endif%}
+  </body>
+</html>

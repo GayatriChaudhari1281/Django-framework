@@ -1,0 +1,12 @@
+ <html>
+<body>
+  <form method="post">
+    {{fobj.as_p}}
+    {%csrf_token%}
+    <input type="submit" value="Register" class="btn btn-primary">
+  </form>
+  </body>
+</html>
+
+<!--Note:we can use {{fobj.as_p}}
+where p means paragraph ,one by one components vertically arranged<!-->

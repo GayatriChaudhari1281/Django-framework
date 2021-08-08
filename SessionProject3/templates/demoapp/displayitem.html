@@ -1,0 +1,20 @@
+{%extends 'demoapp/base.html'%}
+{%block body_block%}
+<h1>Your Shopping Cart Items Information</h1>
+{%if request.session%}
+<table border=1>
+  <thead>
+    <th>Name of Item</th>
+    <th>Quantity</th>
+  </thead>
+  {%for key,value in request.session.items%}
+  <tr>
+    <td>{{key}}</td>
+    <td>{{value}}</td>
+  </tr>
+  {%endfor%}
+</table>
+{%else%}
+  <p>No items in shopping cart..!!</p>
+{%endif%}
+{%endblock%}

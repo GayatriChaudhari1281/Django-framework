@@ -1,0 +1,31 @@
+.content{
+  background: black;
+  width: 60%;
+  float: left;
+}
+.sidebar{
+  background: yellow;
+  color: black;
+  width: 40%;
+  float: right;
+}
+h1{
+  text-align: center;
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+}
+body{
+  color:white;
+  background: black;
+}
+#date{
+  color:yellow;
+  font-size: 14px;
+  font-style: italic;
+}
+#ch{
+  color: yellow;
+  font-style: oblique;
+  font-size: 30px;
+  border-bottom: 2px solid red;
+}

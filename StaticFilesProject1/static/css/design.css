@@ -1,0 +1,11 @@
+body{
+  background: yellow;
+  color:red;
+  text-align:center;
+}
+
+img{
+  border:10px dotted blue;
+  width:50%;
+  height:750px;
+}

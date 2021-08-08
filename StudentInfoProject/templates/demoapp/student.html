@@ -1,0 +1,27 @@
+{%load static%}
+<html>
+  <head>
+    <link rel="stylesheet" href="{%static "CSS/sinfo.css"%}">
+  </head>
+  <body bgcolor="#DDAODD">
+      <h1>Student information</h1><hr>
+      {%if stud%}
+          {%for i in stud%}
+          <h2>{{i.name}}Information</h2>
+          <hr>
+          <ul>
+            <li>Roll Number:{{i.rollno}}</li>
+            <li>Name:{{i.name}}</li>
+            <li>DOB:{{i.dob}}</li>
+            <li>Marks:{{i.marks}}</li>
+            <li>Email:{{i.email}}</li>
+            <li>Mobile Number:{{i.mobno}}</li>
+            <li>Address:{{i.address}}</li>
+          </ul>
+        <br>
+        {%endfor%}
+      {%else%}
+        <h2>No Student Records Found!!!</h2>
+      {%endif%}
+  </body>
+</html>

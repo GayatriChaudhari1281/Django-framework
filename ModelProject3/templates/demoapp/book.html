@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body bgcolor="#87cefa">
+    <h1>Book information</h1><hr>
+    {%if book%}
+    <table border="1">
+      <thread>
+        <th>Book PNR Number</th>
+        <th>Book Title</th>
+        <th>Book Author name</th>
+      </thread>
+      {%for i in book%}
+      <tr>
+        <td>{{i.PNR_NO}}</td>
+        <td>{{i.title}}</td>
+        <td>{{i.author}}</td>
+      </tr>
+      {%endfor%}
+      {%else%}
+      <h2>No Book Records Found!!!</h2>
+      {%endif%}
+  </body>
+</html>

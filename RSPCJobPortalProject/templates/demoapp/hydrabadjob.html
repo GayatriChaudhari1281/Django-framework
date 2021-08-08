@@ -1,0 +1,39 @@
+{%load static%}
+<html>
+  <head>
+    <link rel="stylesheet" href="{%static "CSS/job.css"%}">
+  </head>
+  <body bgcolor=green>
+    <h1>Hydrabad Jobs Information</h1>
+    <img src="{%static "images/images (1).jpg"%}"/>
+    <img src="{%static "images/images (2).jpg"%}"/>
+    <img src="{%static "images/images (3).jpg"%}"/>
+    <img src="{%static "images/images (4).jpg"%}"/>
+    <hr>
+    {%if hjobs%}
+    <table border="1">
+      <thread>
+        <th>Date</th>
+        <th>Company</th>
+        <th>Title</th>
+        <th>Elligibility</th>
+        <th>Address</th>
+        <th>Email Id</th>
+        <th>Mobile Number</th>
+      </thread>
+      {%for i in hjobs%}
+      <tr>
+        <td>{{i.date}}</td>
+        <td>{{i.company}}</td>
+        <td>{{i.title}}</td>
+        <td>{{i.eligibility}}</td>
+        <td>{{i.address}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.mobno}}</td>
+      </tr>
+      {%endfor%}
+      {%else%}
+      <h2>No Job Records Found in Hydrabad!!!</h2>
+      {%endif%}
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body bgcolor="#87cefa">
+    <h1>Student information</h1><hr>
+    {%if stud%}
+    <table border="1">
+      <thread>
+        <th>Student Roll Number</th>
+        <th>Student Name</th>
+        <th>Student Marks</th>
+        <th>Syudent Address</th>
+      </thread>
+      {%for i in stud%}
+      <tr>
+        <td>{{i.rollNo}}</td>
+        <td>{{i.name}}</td>
+        <td>{{i.marks}}</td>
+        <td>{{i.address}}</td>
+      </tr>
+      {%endfor%}
+      {%else%}
+      <h2>No Student Records Found!!!</h2>
+      {%endif%}
+  </body>
+</html>

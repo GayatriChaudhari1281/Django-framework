@@ -1,0 +1,15 @@
+h1{
+  background:pink;
+  color:blue;
+}
+body{
+  background:skyblue;
+  color:blue;
+}
+.jumbotron{
+  margin-top:200px;
+}
+img{
+  width:25%;
+  height:200px;
+}

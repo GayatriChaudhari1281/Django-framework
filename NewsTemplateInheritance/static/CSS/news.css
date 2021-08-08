@@ -1,0 +1,15 @@
+h1{
+  background:yellow;
+  color:blue;
+}
+body{
+  background:white;
+  color:blue;
+}
+.jumbotron{
+  margin-top:200px;
+}
+img{
+  width:25%;
+  height:200px;
+}

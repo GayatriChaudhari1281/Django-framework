@@ -1,0 +1,9 @@
+{%extends 'demoapp/base.html'%}
+{%block body_block%}
+<h1>Employee Insertion Form</h1>
+<form method="post">
+  {{fobj.as_p}}
+  {%csrf_token%}
+  <input type="submit" value="insert Record" role="btn btn-primary btn-lg">
+</form>
+{%endblock%}

@@ -1,0 +1,10 @@
+
+{%extends 'demoapp/base.html'%}
+{%block body_block%}
+<h1>Are you sure to delete {{book.title}}</h1><hr>
+<form method="post">
+  {%csrf_token%}
+  <input type="submit" value="Delete Records" class="btn btn-danger btn-lg">&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="/list" class="btn btn-success btn-lg">Cancel</a>
+</form>
+{%endblock%}

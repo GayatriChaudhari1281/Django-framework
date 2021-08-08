@@ -1,0 +1,15 @@
+h1{
+  background:white;
+  color:#B22222;
+}
+body{
+  background:#fd7e14;;
+  color:#B22222;
+}
+.jumbotron{
+  margin-top:200px;
+}
+img{
+  width:25%;
+  height:200px;
+}
