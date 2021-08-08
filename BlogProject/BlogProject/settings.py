@@ -126,7 +126,7 @@ STATICFILES_DIRS=[STATIC_DIR]
 EMAIL_HOST='smtp.gmail.com'#where SMTP server is running
 EMAIL_PORT=587#on which port number the server is running
 #note:SMTP server host we are providing ,but we are not specifying then default value is "localhost"
-EMAIL_HOST_USER='pythongayatri1281@gmail.com'
-EMAIL_HOST_PASSWORD='python@1281'
+EMAIL_HOST_USER='HelloIndia12@gmail.com'
+EMAIL_HOST_PASSWORD='Hello@123'
 EMAIL_USE_TLS=True#(TLS=>Transport Layer Security)but this field is optional
 #NOTE:so if we want to send the mail using django application compulsory this info is configured
