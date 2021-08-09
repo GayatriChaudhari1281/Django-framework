@@ -5,9 +5,15 @@ RSPC Blog Home Page
 
 {%block content%}
 <h1>RSPC's Blog</h1>
+{%if tag%}
+<h2>Post tagged with '{{tag.name}}'</h2>
+{%endif%}
 {%for post in post_list%}
 <a href="{{post.get_absolute_url}}"><h2>{{post.title}}</h2></a>
 <p id='date'>Published on {{post.publish}} by {{post.author|title}}</p>
+<p>Tags:{%for tag in post.tags.all%}
+<a href="{%url 'postlist_by_tag_name' tag.slug%}" class='btn btn-success'>{{tag.name}}</a>
+{%endfor%}</p>
 {{post.body | truncatewords:30 |linebreaks}}
 
 {%endfor%}

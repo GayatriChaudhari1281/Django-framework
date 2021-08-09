@@ -19,6 +19,7 @@ from blog import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^postlist/', views.PostList_view),
+    url(r'^tag/(?P<tag_slug>[-\w]+)/$', views.PostList_view,name='postlist_by_tag_name'),#\w any number of times
     url(r'^postdetail/(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<post>[-\w]+)/$', views.PostDetail_view,name='post_detail'),#canonical name means to identify that post
     url(r'^(?P<id>\d+)/share/$', views.mail_send_view),
 ]

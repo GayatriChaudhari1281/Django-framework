@@ -27,5 +27,6 @@ body{
   color: yellow;
   font-style: oblique;
   font-size: 30px;
+  font-family: cursive, Comic Sans MS;
   border-bottom: 2px solid red;
 }

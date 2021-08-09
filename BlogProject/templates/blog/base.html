@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {%load static%}
+{%load blog_tags%}
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -17,6 +18,15 @@
     <div class="sidebar">
       <h2>RSPC Blog</h2>
       <p>Here You can see blog Updations...!!</p>
+      <p>Total no. of Published Posts are: <span style="color:red;font-size:50px;"><b>{%my_tags%}</b></span></p>
+      <h3>Latest Posts are:</h3>{%show_latest_posts 5%}
+      <h3>Most Commented Posts are:</h3>
+      {%get_MostCommentedPost as MostCommentedPost%}
+      <ul>
+        {%for post in MostCommentedPost%}
+        <li><a href="{{post.get_absolute_url}}">{{post.title}}</a></li>
+        {%endfor%}
+      </ul>
     </div>
   </body>
 </html>

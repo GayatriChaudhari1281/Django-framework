@@ -2,7 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
-
+from taggit.managers import TaggableManager
 
 class Post(models.Model):
     Status_Choice=(('draft','Draft'),('published','Published'))#DROPDOWN list
@@ -16,7 +16,7 @@ class Post(models.Model):
     created=models.DateTimeField(auto_now_add=True)#when post is created
     updated=models.DateTimeField(auto_now=True)#when save method gets called
     status=models.CharField(max_length=10,choices=Status_Choice,default='draft')
-
+    tags=TaggableManager()
     class Meta:
         ordering=('-publish',)#since it is tuple we need to give , when single element is there
 #while printing post then it internally calls to_str method so we have to override it.
